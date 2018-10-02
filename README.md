@@ -21,7 +21,7 @@ Checks whether it is an AMP request by "/amp/" URL suffix or not and, if a resol
 ### mvc.buildPageDefinition
 _..\src\Project\MyProject\Resolvers\AmpProcessXmlBasedLayoutDefinition.cs_
 
-Substitues a normal Layout with the AMP one for AMP requests.
+Substitutes a normal Layout with the AMP one for AMP requests on the fly.
 
 ### mvc.renderRendering
 _..\src\Project\MyProject\Pipelines\ApplyVaryByAmp.cs_
