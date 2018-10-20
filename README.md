@@ -3,7 +3,7 @@ Google AMP in Sitecore module is an open source project supporting the Google Ac
 
 The module covers the following aspects:
 1. AMP view is based on a dedicated AMP Layout with limited AMP HTML, JavaScript and CSS;
-2. Each AMP page has its unique URL as per AMP guidelines (see https://support.google.com/webmasters/answer/6340290?hl=en), for example, an "/amp/" suffix can be added to the standard page URL;
+2. Each AMP page has its unique URL as per [AMP guidelines](https://support.google.com/webmasters/answer/6340290?hl=en), for example, an "/amp/" suffix can be added to the standard page URL;
 3. Page content is shared between non-AMP and AMP views, so no changes to the ordinary content management process.
 
 The solution has been designed based on the standard Sitecore pipeline principle and the exact implementation overrides three Sitecore pipelines:
