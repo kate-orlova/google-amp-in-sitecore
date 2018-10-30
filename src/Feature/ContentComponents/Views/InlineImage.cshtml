@@ -1,14 +1,21 @@
 ﻿@using MyFoundation.Extensions
 
-@if (Context.IsAmpRequest())
+@if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
 {
-    <amp-img srcset="@(Model.Image)"
-             width="@(Model.Image.Width)" height="@(Model.Image.Height)"
-             layout="responsive"
-             alt="@(Model.Image.Alt)">
-    </amp-img>
+    <div>@Editable(Model, e => e.Image)</div>
 }
 else
 {
-    <img data-srcset="@(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)" /> 
+    if (Context.IsAmpRequest())
+     {
+         <amp-img srcset="@(Model.Image)"
+                  width="@(Model.Image.Width)" height="@(Model.Image.Height)"
+                  layout="responsive"
+                  alt="@(Model.Image.Alt)">
+         </amp-img>
+     }
+     else
+     {
+         <img data-srcset="@(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)"/>
+     }
 }
