@@ -99,6 +99,7 @@
     <None Include="packages.config" />
     <Content Include="Views\YouTubeVideo.cshtml" />
     <Content Include="Views\InlineImage.cshtml" />
+    <Content Include="Views\SocialLinks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
