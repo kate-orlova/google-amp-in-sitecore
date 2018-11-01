@@ -2,29 +2,31 @@
 
 @if (Context.IsAmpRequest())
 {
-    <amp-social-share
-        type="email"
-        width="25"
-        height="25">
+    <amp-social-share type="email"
+                      width="25"
+                      height="25">
     </amp-social-share>
-    <amp-social-share
-        type="facebook"
-        data-param-app_id="xxxxxxxxxxxxxxxx"
-        width="25"
-        height="25">
+    <amp-social-share type="facebook"
+                      data-param-app_id="xxxxxxxxxxxxxxxx"
+                      width="25"
+                      height="25">
     </amp-social-share>
-    <amp-social-share
-        type="gplus"
-        width="25"
-        height="25">
+    <amp-social-share type="gplus"
+                      width="25"
+                      height="25">
     </amp-social-share>
-    <amp-social-share
-        type="twitter"
-        width="25"
-        height="25">
+    <amp-social-share type="twitter"
+                      width="25"
+                      height="25">
     </amp-social-share>
 }
 else
 {
+    <a class="btn"
+       href="mailto:youremailaddress@domain.com"
+       aria-label="email"
+       role="button">
+        <span class="screen-reader-text">email</span>
+    </a>
 }
 
