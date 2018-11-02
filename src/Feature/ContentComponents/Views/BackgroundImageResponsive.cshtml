@@ -2,6 +2,11 @@
 
 @if (Context.IsAmpRequest())
 {
+    <amp-img srcset="@(Model.SrcSet)"
+             width="@(Model.Width)" height="@(Model.Height)"
+             layout="responsive"
+             alt="@(Model.Alt)">
+    </amp-img>
 }
 else
 {
