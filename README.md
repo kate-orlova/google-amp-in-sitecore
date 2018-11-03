@@ -34,7 +34,13 @@ _..\src\Project\MyProject\App_Config\Include\MyProject.Amp.config_
 AMP specific config consists of the above pipelines definition and AMP Layout Id.
 
 ## AMP compatible components
-_ContentComponents_ project contains the content components supporting the AMP view, for example _..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml_ demonstrates how to render a YouTube video for AMP.
+_ContentComponents_ project contains the content components supporting the AMP view:
+* YouTubeVideo
+* SocialLinks
+* InlineImage
+* BackgroundImageResponsive
+
+For example _..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml_ demonstrates how to render a YouTube video for AMP.
 Check of the current context by _Context.IsAmpRequest()_ method will allow to adopt the already existing components for AMP view with minimal efforts.
 
 # Contribution
