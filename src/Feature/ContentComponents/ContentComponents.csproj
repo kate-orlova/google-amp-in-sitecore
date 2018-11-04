@@ -101,6 +101,7 @@
     <Content Include="Views\InlineImage.cshtml" />
     <Content Include="Views\SocialLinks.cshtml" />
     <Content Include="Views\BackgroundImageResponsive.cshtml" />
+    <Content Include="Views\BackgroundVideo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
