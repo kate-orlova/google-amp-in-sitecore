@@ -2,6 +2,16 @@
 
 @if (Context.IsAmpRequest())
 {
+    <amp-video width="1024"
+               height="768"
+               src="@(Model.Src)"
+               layout="responsive"
+               autoplay>
+        <div fallback>
+            <p>Your browser doesn't support HTML5 video.</p>
+        </div>
+        <source type="video/mp4" src="@(Model.Src)">
+    </amp-video>
 }
 else
 {
