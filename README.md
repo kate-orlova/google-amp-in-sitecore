@@ -39,6 +39,7 @@ _ContentComponents_ project contains the content components supporting the AMP v
 * SocialLinks
 * InlineImage
 * BackgroundImageResponsive
+* BackgroundVideo
 
 For example _..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml_ demonstrates how to render a YouTube video for AMP.
 Check of the current context by _Context.IsAmpRequest()_ method will allow to adopt the already existing components for AMP view with minimal efforts.
