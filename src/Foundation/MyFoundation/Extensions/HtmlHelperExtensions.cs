@@ -18,6 +18,11 @@ namespace MyFoundation.Extensions
         public static string GetResizedMediaUrl(this HtmlHelper helper, string url, int maxWidth,
             string additionalParameters, bool externalSource = false)
         {
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                return null;
+            }
+
             var separator = url.Contains("?") ? "&" : "?";
             var mediaUrl = $"{url}{separator}mw={maxWidth}";
             return HashingUtils.ProtectAssetUrl(mediaUrl);
