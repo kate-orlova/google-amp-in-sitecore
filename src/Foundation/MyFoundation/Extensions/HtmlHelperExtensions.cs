@@ -23,6 +23,11 @@ namespace MyFoundation.Extensions
                 return null;
             }
 
+            if (externalSource)
+            {
+                return ImageProcessor.Resize(url, maxWidth, additionalParameters);
+            }
+
             var separator = url.Contains("?") ? "&" : "?";
             var mediaUrl = $"{url}{separator}mw={maxWidth}";
             return HashingUtils.ProtectAssetUrl(mediaUrl);
