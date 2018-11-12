@@ -16,6 +16,6 @@ else
      }
      else
      {
-         <img data-srcset="@(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)"/>
+         <img data-srcset="@Html.GetResizedSrcSet(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)"/>
      }
 }
