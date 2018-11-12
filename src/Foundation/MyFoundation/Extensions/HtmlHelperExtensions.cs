@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using MyFoundation.Interfaces;
+using MyFoundation.Models;
 using Sitecore.DependencyInjection;
 using Sitecore.Resources.Media;
 
@@ -14,6 +15,11 @@ namespace MyFoundation.Extensions
 
         private static readonly IExternalImageProcessor ImageProcessor =
             ServiceLocator.ServiceProvider.GetService<IExternalImageProcessor>();
+
+        public static string GetResizedSrcSet(this HtmlHelper helper, Image image, params int[] sizes)
+        {
+            return helper.GetResizedSrcSet(image?.Src, image?.AdditionalParameters, image.HasExternalSource(), sizes);
+        }
 
         public static string GetResizedMediaUrl(this HtmlHelper helper, string url, int maxWidth,
             string additionalParameters, bool externalSource = false)
