@@ -7,6 +7,11 @@ namespace MyFoundation.Extensions
     {
         public static bool HasExternalSource(this Image image)
         {
+            if (image == null)
+            {
+                return false;
+            }
+
             return image.Src.NotEmpty() && image.MediaId == Guid.Empty;
         }
     }
