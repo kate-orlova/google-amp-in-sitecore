@@ -12,7 +12,7 @@ else
 {
     <picture role="presentation">
         <img
-            data-srcset="@(Model.SrcSet)"
+            data-srcset="@Html.GetResizedSrcSet(Model)"
             data-sizes="auto"
             alt="@Model.Alt">
     </picture>
