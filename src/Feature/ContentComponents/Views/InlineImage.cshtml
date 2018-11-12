@@ -8,7 +8,7 @@ else
 {
     if (Context.IsAmpRequest())
      {
-         <amp-img srcset="@(Model.Image)"
+         <amp-img srcset="@Html.GetResizedSrcSet(Model.Image)"
                   width="@(Model.Image.Width)" height="@(Model.Image.Height)"
                   layout="responsive"
                   alt="@(Model.Image.Alt)">
