@@ -2,7 +2,7 @@
 
 @if (Context.IsAmpRequest())
 {
-    <amp-img srcset="@(Model.SrcSet)"
+    <amp-img srcset="@Html.GetResizedSrcSet(Model)"
              width="@(Model.Width)" height="@(Model.Height)"
              layout="responsive"
              alt="@(Model.Alt)">
