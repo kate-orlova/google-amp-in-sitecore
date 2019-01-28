@@ -1,4 +1,5 @@
-﻿@using MyFoundation.Extensions
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<ContentComponents.Models.InlineImage>
+@using MyFoundation.Extensions
 
 @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
 {
@@ -7,15 +8,15 @@
 else
 {
     if (Context.IsAmpRequest())
-     {
-         <amp-img srcset="@Html.GetResizedSrcSet(Model.Image)"
-                  width="@(Model.Image.Width)" height="@(Model.Image.Height)"
-                  layout="responsive"
-                  alt="@(Model.Image.Alt)">
-         </amp-img>
-     }
-     else
-     {
-         <img data-srcset="@Html.GetResizedSrcSet(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)"/>
-     }
+    {
+        <amp-img srcset="@Html.GetResizedSrcSet(Model.Image)"
+                 width="@(Model.Image.Width)" height="@(Model.Image.Height)"
+                 layout="responsive"
+                 alt="@(Model.Image.Alt)">
+        </amp-img>
+    }
+    else
+    {
+        <img data-srcset="@Html.GetResizedSrcSet(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)" />
+    }
 }
