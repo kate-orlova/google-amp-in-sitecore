@@ -1,15 +1,16 @@
-﻿@using MyFoundation.Extensions
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<ContentComponents.Models.YouTubeVideo>
+@using MyFoundation.Extensions
 
 @if (Context.IsAmpRequest())
 {
     <amp-youtube width="1024"
                  height="768"
                  layout="responsive"
-                 data-videoid="YOUR_VIDEO_ID"
+                 data-videoid="@Model.VideoId"
                  autoplay>
     </amp-youtube>
 }
 else
 {
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1" frameborder="0" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/@(Model.VideoId)?autoplay=1" frameborder="0" allowfullscreen=""></iframe>
 }
