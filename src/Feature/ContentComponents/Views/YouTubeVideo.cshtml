@@ -7,10 +7,10 @@
                  height="768"
                  layout="responsive"
                  data-videoid="@Model.VideoId"
-                 autoplay>
+                 @(Model.Autoplay ? "autoplay" : "")>
     </amp-youtube>
 }
 else
 {
-    <iframe src="https://www.youtube.com/embed/@(Model.VideoId)?autoplay=1" frameborder="0" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/@(Model.VideoId)?rel=0&showinfo=0@(Model.Autoplay ? "&autoplay=1" : "")" frameborder="0" allowfullscreen=""></iframe>
 }
