@@ -33,14 +33,14 @@ else
        href="#/"
        aria-label="Facebook"
        role="button"
-       onclick="window.open('http://www.facebook.com/sharer.php?u=@Model.CurrentPageAbsoluteUrl&hashtag=YOUR_HASH_TAG&quote=@Model.CurrentPageTitle', 'Sharer', 'toolbar=0,status=0,top=' + ((screen.height / 2) - (200 / 2)) + ',left=' + ((screen.width / 2) - (520 / 2)) + ',width=520,height=200');return false;">
+       onclick="window.open('http://www.facebook.com/sharer.php?u=@Model.CurrentPageAbsoluteUrl&hashtag=@Model.FacebookHashTags&quote=@Model.CurrentPageTitle', 'Sharer', 'toolbar=0,status=0,top=' + ((screen.height / 2) - (200 / 2)) + ',left=' + ((screen.width / 2) - (520 / 2)) + ',width=520,height=200');return false;">
         <span class="screen-reader-text">Facebook</span>
     </a>
     <a class="btn"
        href="#/"
        aria-label="Twitter"
        role="button"
-       onclick="window.open('http://twitter.com/intent/tweet?url=@Model.CurrentPageAbsoluteUrl&hashtags=YOUR_HASH_TAG&text=@Model.CurrentPageTitle', 'Sharer', 'toolbar=0,status=0,top=' + ((screen.height / 2) - (250 / 2)) + ',left=' + ((screen.width / 2) - (520 / 2)) + ',width=520,height=250');return false;">
+       onclick="window.open('http://twitter.com/intent/tweet?url=@Model.CurrentPageAbsoluteUrl&hashtags=@Model.TwitterHashTags&text=@Model.CurrentPageTitle', 'Sharer', 'toolbar=0,status=0,top=' + ((screen.height / 2) - (250 / 2)) + ',left=' + ((screen.width / 2) - (520 / 2)) + ',width=520,height=250');return false;">
         <span class="screen-reader-text">Twitter</span>
     </a>
 }
