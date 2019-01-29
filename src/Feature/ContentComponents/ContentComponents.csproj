@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\InlineImage.cs" />
+    <Compile Include="Models\SocialLinks.cs" />
     <Compile Include="Models\YouTubeVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
