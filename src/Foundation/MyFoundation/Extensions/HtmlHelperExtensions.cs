@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using MyFoundation.Interfaces;
@@ -64,7 +65,19 @@ namespace MyFoundation.Extensions
 
         public static MvcHtmlString RenderJson(this HtmlHelper helper, object model, bool wrapSrcipt = true, string mimeType = "application/ld+json")
         {
-            return new MvcHtmlString(string.Empty);
+            var scriptTagBegin = mimeType.NotEmpty() ? $"<script type=\"{mimeType}\">" : "<script>";
+            var stringBuilder = wrapSrcipt
+                ? new StringBuilder(scriptTagBegin)
+                : new StringBuilder();
+
+            stringBuilder.Append(model);
+
+            if (wrapSrcipt)
+            {
+                stringBuilder.Append("</script>");
+            }
+
+            return new MvcHtmlString(stringBuilder.ToString());
         }
     }
 }
