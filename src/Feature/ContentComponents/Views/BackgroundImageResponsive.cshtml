@@ -1,4 +1,5 @@
 ﻿@using MyFoundation.Extensions
+@model MyFoundation.Models.Image
 
 @if (Context.IsAmpRequest())
 {
@@ -11,9 +12,8 @@
 else
 {
     <picture role="presentation">
-        <img
-            data-srcset="@Html.GetResizedSrcSet(Model)"
-            data-sizes="auto"
-            alt="@Model.Alt">
+        <img data-srcset="@Html.GetResizedSrcSet(Model)"
+             data-sizes="auto"
+             alt="@Model.Alt">
     </picture>
 }
