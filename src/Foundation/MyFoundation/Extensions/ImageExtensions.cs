@@ -15,10 +15,18 @@ namespace MyFoundation.Extensions
 
             return image.Src.NotEmpty() && image.MediaId == Guid.Empty;
         }
+
         public static ImageObject GetMicrodata(this Image image)
         {
-            return new ImageObject();
-            
+            return new ImageObject
+            {
+                Author = new Organization(),
+                Description = image?.Alt ?? String.Empty,
+                ContentUrl = new Uri(image?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
+                Url = new Uri(image?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
+                ThumbnailUrl = new Uri(image?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
+                UploadDate = (image?.DateUpdated ?? new DateTime()).ToDateTimeOffset()
+            };
         }
     }
 }
