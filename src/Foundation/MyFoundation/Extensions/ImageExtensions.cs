@@ -1,5 +1,6 @@
 ﻿using System;
 using MyFoundation.Models;
+using Schema.NET;
 
 namespace MyFoundation.Extensions
 {
@@ -13,6 +14,11 @@ namespace MyFoundation.Extensions
             }
 
             return image.Src.NotEmpty() && image.MediaId == Guid.Empty;
+        }
+        public static ImageObject GetMicrodata(this Image image)
+        {
+            return new ImageObject();
+            
         }
     }
 }
