@@ -61,5 +61,10 @@ namespace MyFoundation.Extensions
 
             return string.Join(",", srcSetList);
         }
+
+        public static MvcHtmlString RenderJson(this HtmlHelper helper, object model, bool wrapSrcipt = true, string mimeType = "application/ld+json")
+        {
+            return new MvcHtmlString(string.Empty);
+        }
     }
 }
