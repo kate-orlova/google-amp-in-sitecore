@@ -63,8 +63,14 @@ namespace MyFoundation.Extensions
             return string.Join(",", srcSetList);
         }
 
-        public static MvcHtmlString RenderJson(this HtmlHelper helper, object model, bool wrapSrcipt = true, string mimeType = "application/ld+json")
+        public static MvcHtmlString RenderJson(this HtmlHelper helper, object model, bool wrapSrcipt = true,
+            string mimeType = "application/ld+json")
         {
+            if (model == null)
+            {
+                return new MvcHtmlString(string.Empty);
+            }
+
             var scriptTagBegin = mimeType.NotEmpty() ? $"<script type=\"{mimeType}\">" : "<script>";
             var stringBuilder = wrapSrcipt
                 ? new StringBuilder(scriptTagBegin)
