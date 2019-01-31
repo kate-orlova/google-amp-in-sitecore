@@ -1,4 +1,5 @@
 ﻿using System;
+using MyFoundation.Interfaces;
 using MyFoundation.Models;
 using Schema.NET;
 
@@ -16,11 +17,11 @@ namespace MyFoundation.Extensions
             return image.Src.NotEmpty() && image.MediaId == Guid.Empty;
         }
 
-        public static ImageObject GetMicrodata(this Image image)
+        public static ImageObject GetMicrodata(this Image image, IAuthorResolver authorResolver)
         {
             return new ImageObject
             {
-                Author = new Organization(),
+                Author = authorResolver?.GetAuthor() ?? new Organization(),
                 Description = image?.Alt ?? String.Empty,
                 ContentUrl = new Uri(image?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
                 Url = new Uri(image?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
