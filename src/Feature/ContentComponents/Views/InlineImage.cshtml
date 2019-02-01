@@ -1,5 +1,6 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<ContentComponents.Models.InlineImage>
 @using MyFoundation.Extensions
+@using MyFoundation.Resolvers
 
 @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
 {
@@ -19,4 +20,5 @@ else
     {
         <img data-srcset="@Html.GetResizedSrcSet(Model.Image)" data-sizes="auto" alt="@(Model.Image.Alt)" />
     }
+    @Html.RenderJson(Model.Image.GetMicrodata(new OrganizationAuthorResolver()))
 }
