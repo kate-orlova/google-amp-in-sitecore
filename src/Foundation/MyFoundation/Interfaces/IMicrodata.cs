@@ -1,6 +1,9 @@
-﻿namespace MyFoundation.Interfaces
+﻿using Schema.NET;
+
+namespace MyFoundation.Interfaces
 {
-    public class IMicrodata
+    public interface IMicrodata
     {
+        Thing GetMicrodata(IAuthorResolver authorResolver);
     }
 }
