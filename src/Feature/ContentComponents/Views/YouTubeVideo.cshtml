@@ -1,5 +1,6 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<ContentComponents.Models.YouTubeVideo>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<MyFoundation.Models.YouTubeVideo>
 @using MyFoundation.Extensions
+@using MyFoundation.Resolvers
 
 @if (Context.IsAmpRequest())
 {
@@ -14,3 +15,4 @@ else
 {
     <iframe src="https://www.youtube.com/embed/@(Model.VideoId)?rel=0&showinfo=0@(Model.Autoplay ? "&autoplay=1" : "")" frameborder="0" allowfullscreen=""></iframe>
 }
+

@@ -1,9 +1,9 @@
-﻿using System;
-using Glass.Mapper.Sc.Configuration.Attributes;
-using MyFoundation.Interfaces;
+﻿using MyFoundation.Interfaces;
 using Schema.NET;
+using System;
+using Glass.Mapper.Sc.Configuration.Attributes;
 
-namespace ContentComponents.Models
+namespace MyFoundation.Models
 {
     public class YouTubeVideo : IMicrodata
     {
@@ -11,6 +11,7 @@ namespace ContentComponents.Models
 
         [SitecoreField("YouTube Video Autoplay")]
         public virtual Boolean Autoplay { get; set; }
+
         public Thing GetMicrodata(IAuthorResolver authorResolver)
         {
             return new VideoObject();
