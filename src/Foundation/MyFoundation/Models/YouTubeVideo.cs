@@ -25,7 +25,8 @@ namespace MyFoundation.Models
                 Id = new Uri(@"https://www.youtube.com/watch?v=" + (VideoId ?? string.Empty), UriKind.RelativeOrAbsolute),
                 Thumbnail = splashImageScreen,
                 ThumbnailUrl = new Uri(SplashImageScreen?.Src ?? string.Empty, UriKind.RelativeOrAbsolute),
-                Author = authorResolver?.GetAuthor() ?? new Organization()
+                Author = authorResolver?.GetAuthor() ?? new Organization(),
+                UploadDate = splashImageScreen.UploadDate
             };
         }
     }
