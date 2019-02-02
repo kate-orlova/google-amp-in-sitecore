@@ -20,7 +20,12 @@ namespace MyFoundation.Models
         public Thing GetMicrodata(IAuthorResolver authorResolver)
         {
             var splashImageScreen = SplashImageScreen.GetMicrodata(authorResolver);
-            return new VideoObject();
+            return new VideoObject
+            {
+                Id = new Uri(@"https://www.youtube.com/watch?v=" + (VideoId ?? string.Empty), UriKind.RelativeOrAbsolute),
+                Thumbnail = splashImageScreen,
+                ThumbnailUrl = new Uri(SplashImageScreen?.Src ?? string.Empty, UriKind.RelativeOrAbsolute)           
+            };
         }
     }
 }
