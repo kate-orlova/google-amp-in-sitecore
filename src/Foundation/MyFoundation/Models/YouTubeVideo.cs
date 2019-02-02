@@ -20,6 +20,9 @@ namespace MyFoundation.Models
         [SitecoreField("SEO Video Name")]
         public virtual string SeoVideoName { get; set; }
 
+        [SitecoreField("SEO Video Description")]
+        public virtual string SeoVideoDescription { get; set; }
+
         public Thing GetMicrodata(IAuthorResolver authorResolver)
         {
             var splashImageScreen = SplashImageScreen.GetMicrodata(authorResolver);
