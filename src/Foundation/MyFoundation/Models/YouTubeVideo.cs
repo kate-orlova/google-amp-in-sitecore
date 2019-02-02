@@ -32,7 +32,8 @@ namespace MyFoundation.Models
                 Thumbnail = splashImageScreen,
                 ThumbnailUrl = new Uri(SplashImageScreen?.Src ?? string.Empty, UriKind.RelativeOrAbsolute),
                 Author = authorResolver?.GetAuthor() ?? new Organization(),
-                UploadDate = splashImageScreen.UploadDate
+                UploadDate = splashImageScreen.UploadDate,
+                Name = SeoVideoName
             };
         }
     }
