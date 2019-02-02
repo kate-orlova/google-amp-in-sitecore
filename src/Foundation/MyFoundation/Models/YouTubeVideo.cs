@@ -2,6 +2,7 @@
 using MyFoundation.Interfaces;
 using Schema.NET;
 using System;
+using MyFoundation.Extensions;
 
 namespace MyFoundation.Models
 {
@@ -18,6 +19,7 @@ namespace MyFoundation.Models
 
         public Thing GetMicrodata(IAuthorResolver authorResolver)
         {
+            var splashImageScreen = SplashImageScreen.GetMicrodata(authorResolver);
             return new VideoObject();
         }
     }
