@@ -1,5 +1,8 @@
-﻿using MyFoundation.Interfaces;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MyFoundation.Interfaces;
+using MyFoundation.Models;
 using Schema.NET;
+using Sitecore.DependencyInjection;
 
 namespace MyFoundation.Resolvers
 {
@@ -7,8 +10,8 @@ namespace MyFoundation.Resolvers
     {
         public Values<Organization, Person> GetAuthor()
         {
-            // TODO: 1. create a local setting for organisation
-            return new Organization();
+            var localSettings = ServiceLocator.ServiceProvider.GetService<LocalSettings>();
+            return localSettings.GetOrganizationMicrodata();
         }
     }
 }
