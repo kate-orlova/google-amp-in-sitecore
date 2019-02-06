@@ -21,6 +21,11 @@ namespace MyFoundation.Models
             {
                 Name = OrganizationName,
                 Url = new Uri(OrganizationURL ?? String.Empty, UriKind.RelativeOrAbsolute),
+                Logo = new ImageObject
+                {
+                    ContentUrl = new Uri(OrganizationLogo?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
+                    Url = new Uri(OrganizationLogo?.Src ?? String.Empty, UriKind.RelativeOrAbsolute)
+                }
             };
         }
     }
