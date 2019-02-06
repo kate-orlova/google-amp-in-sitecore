@@ -12,6 +12,9 @@ namespace MyFoundation.Models
         [SitecoreField("Organisation URL")]
         public virtual string OrganizationURL { get; set; }
 
+        [SitecoreField("Organisation Logo")]
+        public virtual Image OrganizationLogo { get; set; }
+
         public Organization GetOrganizationMicrodata()
         {
             return new Organization
