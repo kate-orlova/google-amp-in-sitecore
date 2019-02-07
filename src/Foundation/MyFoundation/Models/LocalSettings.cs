@@ -28,6 +28,11 @@ namespace MyFoundation.Models
                 {
                     ContentUrl = new Uri(OrganizationLogo?.Src ?? String.Empty, UriKind.RelativeOrAbsolute),
                     Url = new Uri(OrganizationLogo?.Src ?? String.Empty, UriKind.RelativeOrAbsolute)
+                },
+                ContactPoint = new ContactPoint
+                {
+                    Telephone = ContactPhone ?? String.Empty,
+                    ContactType = "customer service"
                 }
             };
         }
