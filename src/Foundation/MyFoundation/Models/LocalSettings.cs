@@ -18,6 +18,9 @@ namespace MyFoundation.Models
         [SitecoreField("Organisation Phone")]
         public virtual string ContactPhone { get; set; }
 
+        [SitecoreField("Organisation Social Network Links")]
+        public virtual string OrganizationSocialNetworkLinks { get; set; }
+
         public Organization GetOrganizationMicrodata()
         {
             return new Organization
