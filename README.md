@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/kate-orlova/google-amp-in-sitecore.svg)](https://github.com/kate-orlova/google-amp-in-sitecore/blob/master/LICENSE)
+
 # Google AMP in Sitecore module
 Google AMP in Sitecore module is an open source project supporting the Google Accelerated Mobile Pages (AMP) integration with Sitecore.
 
