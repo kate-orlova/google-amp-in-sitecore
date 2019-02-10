@@ -44,6 +44,8 @@ _ContentComponents_ project contains the content components supporting the AMP v
 For example _..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml_ demonstrates how to render a YouTube video for AMP.
 Check of the current context by _Context.IsAmpRequest()_ method will allow to adopt the already existing components for AMP view with minimal efforts.
 
+All components have the embeded microdata to render a structured data in JSON format and help Google to understand the content of the page where they are placed on.
+
 # Contribution
 Hope you found the above solution elegant and helpful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
 
