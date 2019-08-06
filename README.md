@@ -32,7 +32,7 @@ Substitutes a normal Layout with the AMP one for AMP requests on the fly.
 ### mvc.renderRendering
 _..\src\Project\MyProject\Pipelines\ApplyVaryByAmp.cs_
 
-Extends the standard Vary By Param cache option to support AMP view.
+Extends the standard _Vary By Param_ cache option to support AMP view.
 
 ## AMP Config
 _..\src\Project\MyProject\App_Config\Include\MyProject.Amp.config_
