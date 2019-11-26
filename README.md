@@ -5,7 +5,7 @@
 ![HitHub repo size](https://img.shields.io/github/repo-size/kate-orlova/google-amp-in-sitecore.svg?style=flat)
 
 # Google AMP in Sitecore module
-Google AMP in Sitecore module is an open source project supporting the Google Accelerated Mobile Pages (AMP) integration with Sitecore. It employs the Google AMP publishing technology to create web pages in Sitecore that load instantly on mobile devices through a Google search.
+Google AMP in Sitecore module is an open source project supporting the Google Accelerated Mobile Pages (AMP) integration with Sitecore. It employs the Google AMP publishing technology to create web pages in Sitecore that load instantly on mobile devices through a Google search what brings a great performance benefit to the end users and improves the page ranking factor.
 
 The module covers the following aspects:
 1. AMP view of a Sitecore page is based on a dedicated AMP Layout with limited AMP HTML, JavaScript and CSS as per [AMP HTML specification](https://www.ampproject.org/docs/fundamentals/spec);
