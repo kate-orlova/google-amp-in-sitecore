@@ -1,3 +1,4 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kate-orlova/google-amp-in-sitecore)
 [![GitHub release](https://img.shields.io/github/release-date/kate-orlova/google-amp-in-sitecore.svg?style=flat)](https://github.com/kate-orlova/google-amp-in-sitecore/releases/tag/MVPRelease)
 [![GitHub license](https://img.shields.io/github/license/kate-orlova/google-amp-in-sitecore.svg)](https://github.com/kate-orlova/google-amp-in-sitecore/blob/master/LICENSE)
 ![GitHub language count](https://img.shields.io/github/languages/count/kate-orlova/google-amp-in-sitecore.svg?style=flat)
