@@ -22,22 +22,22 @@ The fundamental design of this solution is based on the standard Sitecore pipeli
 ## Sitecore Pipelines
 
 ### httpRequestBegin
-_..\src\Project\MyProject\Resolvers\AmpItemResolver.cs_
+`..\src\Project\MyProject\Resolvers\AmpItemResolver.cs`
 
 Checks whether it is an AMP request by _"/amp/"_ URL suffix or not and, if a resolved item has an AMP view, sets an AMP flag to true.
 
 ### mvc.buildPageDefinition
-_..\src\Project\MyProject\Resolvers\AmpProcessXmlBasedLayoutDefinition.cs_
+`..\src\Project\MyProject\Resolvers\AmpProcessXmlBasedLayoutDefinition.cs`
 
 Substitutes a normal Layout with the AMP one for AMP requests on the fly.
 
 ### mvc.renderRendering
-_..\src\Project\MyProject\Pipelines\ApplyVaryByAmp.cs_
+`..\src\Project\MyProject\Pipelines\ApplyVaryByAmp.cs`
 
 Extends the standard _Vary By Param_ cache option to support AMP view.
 
 ## AMP Config
-_..\src\Project\MyProject\App_Config\Include\MyProject.Amp.config_
+`..\src\Project\MyProject\App_Config\Include\MyProject.Amp.config`
 
 AMP specific config consists of the above pipelines definition and AMP Layout Id.
 
@@ -49,8 +49,8 @@ _ContentComponents_ project contains the content components supporting the AMP v
 * BackgroundImageResponsive
 * BackgroundVideo
 
-For example _..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml_ demonstrates how to render a YouTube video for AMP.
-Check of the current context by _Context.IsAmpRequest()_ method will allow to adopt the already existing components for AMP view with minimal efforts.
+For example `..\src\Feature\ContentComponents\Views\YouTubeVideo.cshtml` demonstrates how to render a YouTube video for AMP.
+Check of the current context by `Context.IsAmpRequest()` method will allow to adopt the already existing components for AMP view with minimal efforts.
 
 All components have the embeded microdata to render a structured data in JSON format and help Google to understand the content of the page where they are placed on. [Schema.NET version 3.6.0](https://www.nuget.org/packages/Schema.NET/) package has been used for Schema.org objects in .NET classes.
 
